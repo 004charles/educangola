@@ -1,0 +1,171 @@
+/* large screens */
+@media (min-width: 1600px)
+{
+    .container
+    {
+        max-width: 1150px;
+    }
+}
+
+
+@media (max-width: 1500px)
+{
+    .container
+    {
+        max-width: 1150px;
+    }
+}
+
+
+/* Desktops/Laptops */
+@media (max-width: 1200px)
+{
+    .product
+    {
+        padding: 0;
+    }
+    .product_review
+    {
+        margin: 0;
+    }
+    .review_btn button
+    {
+        padding: 0 70px;
+    }
+    .thankyouinner
+    {
+        min-height: auto;
+    }
+}
+
+/* Laptops */
+@media (max-width: 1024px)
+{
+
+}
+
+/* Tablets */
+@media (max-width: 768px)
+{
+    .tab-100
+    {
+        width: 100%;
+    }
+    .tab-50
+    {
+        width: 50%;
+    }
+    .order_c
+    {
+        order: 2;
+    }
+    .wrapper
+    {
+        padding: 20px 10px;
+    }
+    .product
+    {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .shapep
+    {
+        width: 1px;
+        height: 166px;
+        top: -130px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .thankyouPage .wrapper
+    {
+        width: 100%;
+    }
+}
+
+/* mobile */
+@media (max-width: 480px)
+{
+    .wrapper
+    {
+        padding: 10px 0;
+    }
+    .product_review
+    {
+        border-radius: 0;
+        padding: 0 20px;
+    }
+    .review_title
+    {
+        font-size: 20px;
+    }
+    .num-heading
+    {
+        font-size: 18px;
+    }
+    .input_field label
+    {
+        font-size: 16px;
+    }
+    .input_field input, .input_field .select-toggle, .input_field .select_no_drop
+    {
+        font-size: 10px;
+    }
+    .select-toggle, .select_no_drop
+    {
+        font-size: 11px !important;
+    }
+    .no-drop-menu
+    {
+        font-size: 11px;
+    }
+    .no-drop-option i
+    {
+        font-size: 12px;
+    }
+    .reaction_inner
+    {
+        border-radius: 0;
+    }
+    .info-text h5
+    {
+        font-size: 12px;
+    }
+    .radio-toggle
+    {
+        margin: 0 !important;
+    }
+    .review_btn button
+    {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .product
+    {
+        width: 100%;
+    }
+    .product_txt h3
+    {
+        font-size: 24px;
+    }
+    .product_txt p
+    {
+        font-size: 14px;
+    }
+    .thankyouinner
+    {
+        padding: 40px 20px;
+        border-radius: 0;
+    }
+    .thankyouHeading
+    {
+        font-size: 22px;
+    }
+    .thankyouTxt
+    {
+        width: 100%;
+        font-size: 13px;
+    }
+
+}

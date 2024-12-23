@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM I EDUCANGOLA?</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap/bootstrap.min.css' %}">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="{% static 'assets/css/animation.css' %}">
+
+
+
+    
+</head>
+<body>
+    <main class="overflow-hidden">
+        <div class="container">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-md-4 tab-100 order_c fadeInRight">
+                        <div class="product">
+                            <div class="product_img">
+                                <img style="width: 230px;" src="{% static 'assets/images/Artboard 1.png' %}" alt="product">
+                            </div>
+                            <article class="product_txt"> <h3>Sua Opinião é Importante!</h3> <p>Por favor, compartilhe sua experiência com nossa plataforma de educação: O que você gostaria de ver por aqui? Que recursos ou funcionalidades tornariam sua experiência melhor?</p> </article>
+                            <div class="shapep"></div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-8 tab-100 fadeInleft">
+                        <div class="product_review">
+                            <!-- Ajuste da imagem para ser responsiva e centralizada -->
+                           
+                            <h2 class="review_title text-center text-md-start">
+                                SEJA PARTE DO "EDUCANGOLA"
+                            </h2>
+                            <h2 class="review_title text-center text-md-start">
+                                Deixe Sua Opinião
+                            </h2>
+                            <div class="product_review_inner">
+                                <h4 class="num-heading text-center text-md-start">Ajude-nos a melhorar a plataforma!</h4>
+                                <form action="{% url 'feedback_view' %}" method="POST" novalidate> {% csrf_token %}
+                                    <!-- Pergunta sobre funcionalidades -->
+                                    <div class="input_field">
+                                        <label for="funcionalidades" class="h5 h6-sm">Quais funcionalidades você gostaria de ver na plataforma?</label>
+                                        <input type="text" name="funcionalidades" id="funcionalidades" class="form-control form-control-lg" placeholder="Exemplo: biblioteca online, grupos de estudo, etc.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre tipo de conteúdo -->
+                                    <div class="input_field">
+                                        <label for="tipo_conteudo" class="h5 h6-sm">Que tipo de conteúdo você gostaria de acessar na plataforma?</label>
+                                        <input type="text" name="tipo_conteudo" id="tipo_conteudo" class="form-control form-control-lg" placeholder="Exemplo: videoaulas, textos, quizzes, etc.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre grupos de estudo -->
+                                    <div class="input_field">
+                                        <label for="grupos_estudo" class="h5 h6-sm">Você acha que seria útil ter grupos de estudo dentro da plataforma?</label>
+                                        <input type="text" name="grupos_estudo" id="grupos_estudo" class="form-control form-control-lg" placeholder="Sim ou Não, e por quê?">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre biblioteca de recursos -->
+                                    <div class="input_field">
+                                        <label for="biblioteca_recursos" class="h5 h6-sm">Você gostaria de ter acesso a uma biblioteca de recursos (ex: livros, artigos)?</label>
+                                        <input type="text" name="biblioteca_recursos" id="biblioteca_recursos" class="form-control form-control-lg" placeholder="Escreva sua opinião sobre uma biblioteca de recursos.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre tutorias online -->
+                                    <div class="input_field">
+                                        <label for="tutoriais_online" class="h5 h6-sm">Você acharia útil ter tutoriais ou sessões de tutoria online disponíveis?</label>
+                                        <input type="text" name="tutoriais_online" id="tutoriais_online" class="form-control form-control-lg" placeholder="Conte-nos sobre sua opinião sobre tutorias online.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre integração com outras plataformas -->
+                                    <div class="input_field">
+                                        <label for="integracao" class="h5 h6-sm">Você gostaria de integrar a plataforma com outras ferramentas (como Google Drive, Zoom, etc.)?</label>
+                                        <input type="text" name="integracao" id="integracao" class="form-control form-control-lg" placeholder="Exemplo: integração com Google Drive, Zoom, etc.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre funcionalidades móveis -->
+                                    <div class="input_field">
+                                        <label for="funcionalidades_moveis" class="h5 h6-sm">Que funcionalidades você gostaria de ver em uma versão móvel da plataforma?</label>
+                                        <input type="text" name="funcionalidades_moveis" id="funcionalidades_moveis" class="form-control form-control-lg" placeholder="Exemplo: notificações, acesso offline, etc.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre usabilidade -->
+                                    <div class="input_field">
+                                        <label for="usabilidade" class="h5 h6-sm">Você tem alguma sugestão para melhorar a usabilidade da plataforma?</label>
+                                        <input type="text" name="usabilidade" id="usabilidade" class="form-control form-control-lg" placeholder="Escreva sua sugestão para melhorar a usabilidade.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre interação com outros usuários -->
+                                    <div class="input_field">
+                                        <label for="interacao" class="h5 h6-sm">Você gostaria de poder interagir com outros usuários (ex: fóruns, mensagens)?</label>
+                                        <input type="text" name="interacao" id="interacao" class="form-control form-control-lg" placeholder="Diga se você gostaria de mais interação social.">
+                                    </div>
+                                
+                                    <!-- Pergunta sobre feedback -->
+                                    <div class="input_field">
+                                        <label for="feedback" class="h5 h6-sm">Como você prefere fornecer feedback sobre a plataforma?</label>
+                                        <input type="text" name="feedback" id="feedback" class="form-control form-control-lg" placeholder="Exemplo: formulários de feedback, chat de suporte, etc.">
+                                    </div>
+                                
+                                    <div class="review_btn">
+                                        <a href="thankyou.html" target="_blank">
+                                            <button type="submit" id="submit" class="submit btn btn-primary btn-lg">Enviar Opinião <img src="{% static 'assets/images/thumb.gif' %}" alt="thumb"></button>
+                                        </a>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                                      
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- Bootstrap 5 -->
+    <script src="{% static 'assets/js/bootstrap/bootstrap.min.js' %}"></script>
+
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jQuery/jquery-3.6.4.min.js' %}"></script>
+
+    <!-- My JS -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>
